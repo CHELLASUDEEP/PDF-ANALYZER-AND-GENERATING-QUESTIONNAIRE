@@ -1,0 +1,8 @@
+langchain
+openai
+pypdf
+tiktoken
+streamlit
+jinja2
+python-multipart
+PyPDF2
