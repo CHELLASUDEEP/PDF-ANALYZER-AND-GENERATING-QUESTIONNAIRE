@@ -16,7 +16,7 @@ import csv
 os.environ["OPENAI_API_KEY"] = "YOUR_OPEN_API_KEY"
 
 # Set file path
-file_path = r'C:\Users\CH\Desktop\practice codes\chella\static\docs\Big Mac Index.pdf'
+file_path = r'C:\Users\CH\Desktop\practice codes\chella\static\Big Mac Index.pdf'
 
 def count_pdf_pages(pdf_path):
     try:
@@ -129,7 +129,7 @@ def llm_pipeline(file_path):
 
 def get_csv(file_path):
     answer_generation_chain, ques_list = llm_pipeline(file_path)
-    base_folder = r'C:\Users\CH\Desktop\practice codes\chella\static\output'
+    base_folder = r'C:\Users\CH\Desktop\practice codes\chella\output'
     if not os.path.isdir(base_folder):
         os.mkdir(base_folder)
     output_file = base_folder + f"{(file_path.split('/')[-1]).split('.')[0]}.csv"
